@@ -1,0 +1,44 @@
+﻿@using POSApplication.Models.DTOs
+@model IEnumerable<InvoiceInfoDTO>
+<h3>Invoice Index</h3>
+<a class="btn btn-primary" asp-area="" asp-controller="Invoice" asp-action="AddInvoice">Add Invoice</a>
+<table class="table table-striped" id="invoiceTable">
+    <thead>
+        <tr>
+            <th>SL</th>
+            <th>Invoice No</th>
+            <th>Invoice Date</th>
+            <th>Total Amount</th>
+            <th>Discount Amount</th>
+            <th>Tax</th>
+            <th>Customer Name</th>
+            <th>Customer Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int sl = 0;
+        }
+        @foreach (var invoice in Model)
+        {
+            sl++;
+            <tr>
+                <td>@sl</td>
+                <td>@invoice.InvoiceNumber</td>
+                <td>@invoice.InvoiceDate.ToString("dd/MM/yyyy")</td>
+                <td>@invoice.TotalAmount</td>
+                <td>@invoice.DiscountAmount</td>
+                <td>@invoice.TaxAmount</td>
+                <td>@invoice.CustomerName</td>
+                <td>@invoice.CustomerPhone</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<script>
+    // $('#invoiceTable').DataTable( {
+    //     responsive: true
+    // });
+</script>

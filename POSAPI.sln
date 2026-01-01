@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSAPI", "POSAPI\POSAPI.csproj", "{E00C7131-3FB6-41F8-AB02-D80BFCB3B2B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSAPI.Models", "POSAPI.Models\POSAPI.Models.csproj", "{0F50525E-392B-21C4-E350-1D71F855CEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSAPI.DAL", "POSAPI.DAL\POSAPI.DAL.csproj", "{FA758399-8E1C-483F-8399-F3A2DCC0DFE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSApplication", "POSApplication\POSApplication.csproj", "{97A08937-C2B1-4214-AFBA-3223EFD7D359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSApplication.DAL", "POSApplication.DAL\POSApplication.DAL.csproj", "{A905DE17-23D0-4468-AE1F-A63D84518104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSApplication.Models", "POSApplication.Models\POSApplication.Models.csproj", "{F5150DF2-6CFD-44D2-99EC-05EECE7841D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E00C7131-3FB6-41F8-AB02-D80BFCB3B2B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00C7131-3FB6-41F8-AB02-D80BFCB3B2B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00C7131-3FB6-41F8-AB02-D80BFCB3B2B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00C7131-3FB6-41F8-AB02-D80BFCB3B2B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F50525E-392B-21C4-E350-1D71F855CEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F50525E-392B-21C4-E350-1D71F855CEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F50525E-392B-21C4-E350-1D71F855CEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F50525E-392B-21C4-E350-1D71F855CEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA758399-8E1C-483F-8399-F3A2DCC0DFE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA758399-8E1C-483F-8399-F3A2DCC0DFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA758399-8E1C-483F-8399-F3A2DCC0DFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA758399-8E1C-483F-8399-F3A2DCC0DFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A08937-C2B1-4214-AFBA-3223EFD7D359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A08937-C2B1-4214-AFBA-3223EFD7D359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A08937-C2B1-4214-AFBA-3223EFD7D359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A08937-C2B1-4214-AFBA-3223EFD7D359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A905DE17-23D0-4468-AE1F-A63D84518104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A905DE17-23D0-4468-AE1F-A63D84518104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A905DE17-23D0-4468-AE1F-A63D84518104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A905DE17-23D0-4468-AE1F-A63D84518104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5150DF2-6CFD-44D2-99EC-05EECE7841D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5150DF2-6CFD-44D2-99EC-05EECE7841D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5150DF2-6CFD-44D2-99EC-05EECE7841D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5150DF2-6CFD-44D2-99EC-05EECE7841D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {327ABFC7-54C6-4121-82E7-E50BB4EE950B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,110 @@
+﻿@model POSApplication.Models.ViewModels.InvoiceInfoVm
+<h2>Invoice</h2>
+
+<fieldset class="border border-primary p-3 mb-4">
+    <legend class="float-none w-auto p-2">Legend Title</legend>
+    <form asp-action="AddInvoice" method="post" id="invoiceForm">
+        <div class="row mb-3">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label asp-for="customerName"></label>
+                    <select asp-for="customerName" class="form-control">
+                        <option value="">Select Customer</option>
+                        <option value="Customer A">Customer A</option>
+                        <option value="Customer B">Customer B</option>
+                    </select>
+                    <span asp-validation-for="customerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="totalAmount"></label>
+                    <input asp-for="totalAmount" class="form-control" />
+                    <span asp-validation-for="totalAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="discountAmount"></label>
+                    <input asp-for="discountAmount" class="form-control" />
+                    <span asp-validation-for="discountAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="taxAmount"></label>
+                    <input asp-for="taxAmount" class="form-control" />
+                    <span asp-validation-for="taxAmount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="customerPhone"></label>
+                    <input asp-for="customerPhone" class="form-control" />
+                    <span asp-validation-for="customerPhone" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                Invoice Details
+            </div>
+            <div class="card-body">
+                <table id="detailTable" class="w-100">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Unit Price</th>
+                            <th>Unit Type</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="addRow">Add Another Details</button>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</fieldset>
+
+<script>
+    var rowIndex = 0;
+    $(document).ready(function() {
+        $("#addRow").click(function() {
+            const newRow = `<tr>
+        <td><input type="text" name="invoiceDetails[${rowIndex}][itemId]" class="form-control" required></td>
+        <td><input type="number" name="invoiceDetails[${rowIndex}][unitPrice]" class="form-control" required></td>
+        <td><input type="text" name="invoiceDetails[${rowIndex}][unitType]" class="form-control" required></td>
+        <td><input type="number" name="invoiceDetails[${rowIndex}][quantity]" class="form-control" required></td>
+        <td><button type="button" class="removeRow btn btn-danger">X</button></td>
+    </tr>`;
+            $("#detailTable tbody").append(newRow);
+            rowIndex++;
+        });
+
+        $("#detailTable").on("click", ".removeRow", function() {
+            $(this).closest("tr").remove();
+        });
+    });
+    $('#invoiceForm').submit(function(e) {
+        e.preventDefault();
+        debugger;
+        var formData = $(this).serializeArray();
+
+        $.ajax({
+            url: '/Invoice/AddInvoice',
+            type: 'POST',
+            data: formData,
+            success: function(response) {
+                if(response.code==200){
+                    window.location.href = "https://localhost:7016/Invoice";
+                }
+                else{
+                    alert(response.message);
+                }
+                
+            },
+            error: function(error) {
+                console.log('Error:', error);
+                alert('An error occurred during submission.');
+            }
+        });
+    });
+
+</script>
